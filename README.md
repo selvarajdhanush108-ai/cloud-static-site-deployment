@@ -40,6 +40,11 @@ Terraform provisions and manages:
 - Clean project structure for collaboration and maintenance
 
 ---
+### Live URL
+
+- http://coduxdotfun-bucket-20-04-2026.s3-website.ap-south-1.amazonaws.com/
+
+---
 
 ## Project Structure
 
