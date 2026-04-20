@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Bulletproof full-height reset */
+  html, body {
+    @apply h-full w-full bg-background text-foreground font-sans antialiased selection:bg-white selection:text-black;
+  }
+  
+  /* Force the React root to take up at least the full screen and act as a flex column */
+  #root {
+    @apply flex flex-col min-h-screen w-full overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .glass-nav {
+    @apply bg-background/80 backdrop-blur-xl border-b border-white/10;
+  }
+  .premium-card {
+    @apply bg-card border border-border rounded-2xl p-8 transition-all duration-500 hover:border-white/20 hover:bg-zinc-900/80;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-primary text-primaryForeground font-medium transition-transform hover:scale-105 px-8 py-3 focus:outline-none focus:ring-2 focus:ring-white/50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full bg-muted text-foreground font-medium transition-colors hover:bg-muted/80 px-8 py-3 focus:outline-none focus:ring-2 focus:ring-white/20;
+  }
+  .input-field {
+    @apply w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground placeholder:text-mutedForeground focus:outline-none focus:ring-2 focus:ring-white/20 focus:border-white/30 transition-all;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #09090b; }
+::-webkit-scrollbar-thumb { background-color: #27272a; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background-color: #3f3f46; }
